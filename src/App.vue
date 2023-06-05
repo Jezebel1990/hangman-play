@@ -1,16 +1,16 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import './css/global.css';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <nav class="navbar">
+      <div class="navbar-logo">
+          <img src="logo.png" alt="Logo">
+      </div>
+    </nav>
   </header>
+
 
   <main>
     <TheWelcome />
