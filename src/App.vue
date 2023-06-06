@@ -1,5 +1,7 @@
 <script setup>
 import './css/global.css';
+
+
 </script>
 
 <template>
@@ -10,10 +12,19 @@ import './css/global.css';
       </div>
     </nav>
   </header>
-
-
   <main>
-    <TheWelcome />
+    <div id="app">
+ <h1>Jogo da Forca</h1>
+
+ <section id="inicio">
+Inicio
+ </section>
+
+ <section id="jogo">
+  Jogo
+ </section>
+ 
+    </div>
   </main>
 </template>
 
@@ -44,4 +55,15 @@ header {
     flex-wrap: wrap;
   }
 }
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
 </style>
