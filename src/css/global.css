@@ -1,6 +1,6 @@
 :root{
     --color-background:#2c3e50;  
-    --color-background-button:#2980b9;
+    --color-background-button:#FF6347;
     --color-text-dark:#2c3e50;
     --color-text-light:#ecf0f1;
     --color-text-title:#1abc9c;
@@ -38,3 +38,20 @@
     text-align: center;
   }
 
+button{
+  padding: 10px 15px;
+  background-color: var(--color-background-button);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s opacity;
+
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+button[disabled]{
+  opacity: 0.2;
+}

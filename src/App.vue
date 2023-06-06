@@ -1,6 +1,18 @@
-<script setup>
+<script>
 import './css/global.css';
+import Formulario from './components/form.vue';
 
+export default {
+  name: 'App',
+  data() {
+    return {
+      tela: 'inicio'
+    }
+  },
+  components: {
+    Formulario
+ }
+}
 
 </script>
 
@@ -16,11 +28,11 @@ import './css/global.css';
     <div id="app">
  <h1>Jogo da Forca</h1>
 
- <section id="inicio">
-Inicio
+ <section v-if="tela === 'inicio'" id="inicio">
+   <Formulario />
  </section>
 
- <section id="jogo">
+ <section v-if="tela === 'jogo'" id="jogo">
   Jogo
  </section>
  
