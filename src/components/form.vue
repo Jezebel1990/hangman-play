@@ -1,15 +1,33 @@
 <template>
     <div class="form">
-    <div class="form-title">Defina a palavra</div>
-    <input type="text"  class="form-input">
-    <button>Próximo</button>
+    <div class="form-title">{{ title }}</div>
+    <input type="text"  class="form-input" v-model="inputValue">
+    <button :disabled="inputValue.length === 0"
+    v-on:click="onSubmit"
+    >{{ button }}</button>
 
     </div >
 </template>
 
 <script>
 export default{
-    name: 'Formulario'
+    name: 'Formulario',
+    props:{
+        title: String,
+        button: String,
+        action: Function
+    },
+    data(){
+        return {
+            inputValue:''
+        }
+    },
+    methods: {
+        onSubmit: function(){
+            this.action(this.inputValue);
+            this.inputValue = '';
+        }
+    }
 }
 </script>
 

@@ -6,13 +6,27 @@ export default {
   name: 'App',
   data() {
     return {
-      tela: 'inicio'
+      tela: 'inicio',
+      etapa: 'palavra',
+      palavra: '',
+      dica: ''
     }
   },
   components: {
     Formulario
+  },
+  methods:{
+    setPalavra: function(palavra){
+      this.palavra = palavra;
+      this.etapa = 'dica';
+    },
+    setDica: function(dica){
+      this.dica = dica;
+      this.tela = 'jogo';
+      this.etapa = 'jogo';
+    }
+  }
  }
-}
 
 </script>
 
@@ -29,7 +43,18 @@ export default {
  <h1>Jogo da Forca</h1>
 
  <section v-if="tela === 'inicio'" id="inicio">
-   <Formulario />
+
+ <Formulario v-if="etapa === 'palavra'"
+ title="Defina a palavra"
+ button="Próximo"
+ :action="setPalavra"
+ />
+
+   <Formulario v-if="etapa === 'dica'"
+   title="Defina a dica" 
+   button="Iniciar jogo"
+   :action="setDica"
+   />
  </section>
 
  <section v-if="tela === 'jogo'" id="jogo">
