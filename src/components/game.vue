@@ -11,12 +11,19 @@
             :etapa="etapa"
             />
 
+            <Keyboard
+                v-if="etapa === 'jogo'"
+                :letras="letras"
+                :verificarLetra="verificarLetra"
+                :jogar="jogar"
+            />
     </div >
 </template>
 
 <script>
 import Hangman from './hangman.vue';
 import Word from './word.vue';
+import Keyboard from './Keyboard.vue';
 
 export default{
     name: 'Jogo',
@@ -25,7 +32,9 @@ export default{
        palavra: String,
        dica: String,
        verificarLetra: Function,
-       etapa: String
+       etapa: String,
+       letras: Array,
+       jogar: Function
     },
     data(){
         return {
@@ -37,7 +46,8 @@ export default{
     },
     components:{
         Hangman,
-        Word
+        Word,
+        Keyboard
     }
 }
 </script>

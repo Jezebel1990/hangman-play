@@ -12,7 +12,7 @@ export default {
       palavra: '',
       dica: '',
       erros: 0,
-      letras: ['w']
+      letras: []
     }
   },
   components: {
@@ -32,6 +32,34 @@ export default {
     },
     verificarLetra: function(letra){
       return this.letras.find(item => item.toLowerCase() === letra.toLowerCase());
+    },
+
+    jogar: function(letra){
+      //adiciona letra jogada
+      this.letras.push(letra);
+
+      //validar erro 
+      this.verificarErros(letra);
+    },
+    verificarErros: function(letra){
+      //acerto
+      if(this.palavra.toLowerCase().indexOf(letra.toLowerCase()) >=0){
+        return this.verificarAcertos();
+      }
+      //erros
+      this.erros++;
+
+      //enforcado
+      if(this.erros === 6){
+        this.etapa = 'enforcado'
+      }
+    },
+    verificarAcertos: function(){
+      let letrasUnicas = [...new Set(this.palavra.split(''))];
+      if(letrasUnicas.length === (this.letras.length - this.erros)){
+        this.etapa = 'ganhador';
+      }
+
     }
   }
  }
@@ -73,6 +101,8 @@ export default {
   :dica="dica"
   :verificarLetra="verificarLetra"
   :etapa="etapa"
+  :letras="letras"
+  :jogar="jogar"
   />
  </section>
  
