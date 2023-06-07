@@ -11,7 +11,8 @@ export default {
       etapa: 'palavra',
       palavra: '',
       dica: '',
-      erros: 1
+      erros: 0,
+      letras: ['w']
     }
   },
   components: {
@@ -23,10 +24,14 @@ export default {
       this.palavra = palavra;
       this.etapa = 'dica';
     },
+
     setDica: function(dica){
       this.dica = dica;
       this.tela = 'jogo';
-      this.etapa = 'jogo';
+      this.etapa ='jogo';
+    },
+    verificarLetra: function(letra){
+      return this.letras.find(item => item.toLowerCase() === letra.toLowerCase());
     }
   }
  }
@@ -61,8 +66,14 @@ export default {
  </section>
 
  <section v-if="tela === 'jogo'" id="jogo">
+
   <Jogo 
-  :erros="erros"/>
+  :erros="erros"
+  :palavra="palavra"
+  :dica="dica"
+  :verificarLetra="verificarLetra"
+  :etapa="etapa"
+  />
  </section>
  
     </div>

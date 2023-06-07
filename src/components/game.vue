@@ -2,9 +2,15 @@
     <div class="game">
 
         <Hangman
-        :erros="erros"/>
+            :erros="erros"/>
 
-        <Word />
+        <Word 
+            :palavra="palavra"
+            :dica="dica"
+            :verificarLetra="verificarLetra"
+            :etapa="etapa"
+            />
+
     </div >
 </template>
 
@@ -15,7 +21,11 @@ import Word from './word.vue';
 export default{
     name: 'Jogo',
     props:{
-       erros: Number
+       erros: Number,
+       palavra: String,
+       dica: String,
+       verificarLetra: Function,
+       etapa: String
     },
     data(){
         return {
@@ -26,7 +36,8 @@ export default{
       
     },
     components:{
-        Hangman
+        Hangman,
+        Word
     }
 }
 </script>
