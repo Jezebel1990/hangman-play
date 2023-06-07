@@ -51,13 +51,13 @@ export default {
 
       //enforcado
       if(this.erros === 6){
-        this.etapa = 'enforcado'
+        this.etapa = 'hanged'
       }
     },
     verificarAcertos: function(){
       let letrasUnicas = [...new Set(this.palavra.split(''))];
       if(letrasUnicas.length === (this.letras.length - this.erros)){
-        this.etapa = 'ganhador';
+        this.etapa = 'winner';
       }
 
     }

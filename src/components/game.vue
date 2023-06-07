@@ -2,7 +2,8 @@
     <div class="game">
 
         <Hangman
-            :erros="erros"/>
+            :erros="erros"
+            />
 
         <Word 
             :palavra="palavra"
@@ -16,7 +17,13 @@
                 :letras="letras"
                 :verificarLetra="verificarLetra"
                 :jogar="jogar"
-            />
+                />
+
+            <Endgame 
+                v-if="etapa != 'jogo'"
+                :etapa="etapa"
+                :texto="etapa === 'winner' ? 'Parabéns!' : 'Tadinho :('"
+                />
     </div >
 </template>
 
@@ -24,6 +31,7 @@
 import Hangman from './hangman.vue';
 import Word from './word.vue';
 import Keyboard from './Keyboard.vue';
+import Endgame from './Endgame.vue';
 
 export default{
     name: 'Jogo',
@@ -45,10 +53,11 @@ export default{
       
     },
     components:{
-        Hangman,
-        Word,
-        Keyboard
-    }
+    Hangman,
+    Word,
+    Keyboard,
+    Endgame
+}
 }
 </script>
 
