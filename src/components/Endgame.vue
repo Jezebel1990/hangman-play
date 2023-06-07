@@ -5,7 +5,8 @@
         {{ texto }}
     </div>
 
-    <button class="endgame-button">Jogar novamente</button>
+    <button class="endgame-button"
+    v-on:click="jogarNovamente">Jogar novamente</button>
 
    </div >
 </template>
@@ -16,7 +17,8 @@ export default{
     name: 'Final',
     props:{
         etapa: String,
-        texto: String
+        texto: String,
+        jogarNovamente: Function
     },
     data(){
         return {

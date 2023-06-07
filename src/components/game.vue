@@ -23,6 +23,7 @@
                 v-if="etapa != 'jogo'"
                 :etapa="etapa"
                 :texto="etapa === 'winner' ? 'Parabéns!' : 'Tadinho :('"
+                :jogarNovamente="jogarNovamente"
                 />
     </div >
 </template>
@@ -42,7 +43,8 @@ export default{
        verificarLetra: Function,
        etapa: String,
        letras: Array,
-       jogar: Function
+       jogar: Function,
+       jogarNovamente: Function
     },
     data(){
         return {
