@@ -1,6 +1,7 @@
 <script>
 import './css/global.css';
 import Formulario from './components/form.vue';
+import Jogo from './components/game.vue';
 
 export default {
   name: 'App',
@@ -9,11 +10,13 @@ export default {
       tela: 'inicio',
       etapa: 'palavra',
       palavra: '',
-      dica: ''
+      dica: '',
+      erros: 1
     }
   },
   components: {
-    Formulario
+    Formulario,
+    Jogo
   },
   methods:{
     setPalavra: function(palavra){
@@ -58,7 +61,8 @@ export default {
  </section>
 
  <section v-if="tela === 'jogo'" id="jogo">
-  Jogo
+  <Jogo 
+  :erros="erros"/>
  </section>
  
     </div>
