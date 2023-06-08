@@ -12,3 +12,11 @@ export default defineConfig({
     }
   }
 })
+
+export default {
+  build: {
+    rollupOptions: {
+      external: [/\.png$/], // arquivos PNG como recursos externos
+    },
+  },
+};
