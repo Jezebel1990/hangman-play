@@ -18,11 +18,11 @@ Welcome, this project is a game developed in Vue 3 with reusable props and compo
 
   ## 📂  Access to the project
   
-   **Remote access**
-You can access the demo access [website here](https://6481c458ed8de700085b77a2--exquisite-sunflower-899c82.netlify.app/)
+### Remote access
+  You can access the demo access [website here](https://6481c458ed8de700085b77a2--exquisite-sunflower-899c82.netlify.app/)
 
 
- **Local access**
+### Local access
 [Download code](https://github.com/Jezebel1990/hangman-play.git)
 First, run the development server:
 
