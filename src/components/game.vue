@@ -30,7 +30,7 @@
 
 <script>
 import Hangman from './Hangman.vue';
-import Word from './word.vue';
+import Word from './Word.vue';
 import Keyboard from './Keyboard.vue';
 import Endgame from './Endgame.vue';
 
