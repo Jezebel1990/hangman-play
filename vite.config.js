@@ -5,18 +5,22 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+   build: {
+      rollupOptions: {
+        external: [/\.png$/], // arquivos PNG como recursos externos
+      }
+    },
   plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+    },
+   
   }
+  
 })
 
-export default {
-  build: {
-    rollupOptions: {
-      external: [/\.png$/], // arquivos PNG como recursos externos
-    },
-  },
-};
+
+
+ 
+  
