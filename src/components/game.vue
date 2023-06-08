@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Hangman from './hangman.vue';
+import Hangman from './Hangman.vue';
 import Word from './word.vue';
 import Keyboard from './Keyboard.vue';
 import Endgame from './Endgame.vue';
