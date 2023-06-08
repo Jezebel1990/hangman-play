@@ -1,16 +1,23 @@
-# hangman-play
+# 🎮  Hangman Play 🎮 
+Welcome, this project is a game developed in Vue 3 with reusable props and components.
 
-This template should help get you started developing with Vue 3 in Vite.
+##  👀 Preview
 
-## Recommended IDE Setup
+## ⚙️ Technologies
+- Vue Js;
+- JavaScript
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 🎯 Application features
+  - [x] - Game;
+  - [x] - Keyboard;
+  - [x] - Form;
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+  ## 📂  Access to the project
 
-## Project Setup
+ **Local access**
+[Download code](https://github.com/Jezebel1990/hangman-play.git)
+First, run the development server:
 
 ```sh
 npm install
@@ -22,8 +29,8 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
+## 📚 License
+<p>This project is under the MIT license. See the LICENSE for more information.</p>
+
+Made with ♥ by [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 👋 Get in touch!
