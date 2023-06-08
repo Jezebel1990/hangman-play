@@ -1,9 +1,9 @@
 :root{
-    --color-background:#2c3e50;  
+    --color-background:#161b22;   
     --color-background-button:#FF6347;
     --color-text-dark:#2c3e50;
     --color-text-light:#ecf0f1;
-    --color-text-title:#1abc9c;
+    --color-text-title:#d4b188;
     --color-text-success:#2ecc71;
     --color-text-error:#c0392b;
   }
@@ -26,7 +26,7 @@
     color: var(--color-text-title);
   }
   .navbar {
-    background-color:yellow;
+    background-color:#fcec4f;
     padding: 10px;
     height: 60px;
     width: 100%;
@@ -38,6 +38,20 @@
     text-align: center;
   }
 
+  .footer{
+    background-color:#21262d;
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px;
+  }
+  
+
+  
 button{
   padding: 10px 15px;
   background-color: var(--color-background-button);

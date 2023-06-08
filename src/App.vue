@@ -3,6 +3,8 @@ import './css/global.css';
 import Formulario from './components/form.vue';
 import Jogo from './components/game.vue';
 
+
+
 export default {
   name: 'App',
   data() {
@@ -116,36 +118,29 @@ export default {
  </section>
  
     </div>
+    
   </main>
+  <footer class="footer">
+    <p>Copyright © Hangman Play 2023. Todos os direitos reservados.</p>
+  </footer>
+
+
+
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  .header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+
 
 #app {
   width: 100%;
@@ -154,7 +149,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px;
+  padding: 150px;
 }
-
 </style>
