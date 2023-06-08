@@ -80,7 +80,7 @@ export default {
   <header>
     <nav class="navbar">
       <div class="navbar-logo">
-          <img src="/public/logo.png" alt="Logo">
+          <img src="https://i.imgur.com/LVg7VKM.png" alt="Logo">
       </div>
     </nav>
   </header>
