@@ -19,7 +19,7 @@ Welcome, this project is a game developed in Vue 3 with reusable props and compo
   ## 📂  Access to the project
   
 ### Remote access
-  You can access the demo access [website here](https://6481c458ed8de700085b77a2--exquisite-sunflower-899c82.netlify.app/)
+  You can access the demo access [website here](https://exquisite-sunflower-899c82.netlify.app/)
 
 
 ### Local access
